@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Nonny, My Elysium ♡</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Great+Vibes&display=swap" rel="stylesheet">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background:
+      radial-gradient(ellipse at top, #542032 0%, #200c18 45%, #09070d 100%);
+    color: #f8e6e5;
+    font-family: 'Cormorant Garamond', serif;
+    overflow-x: hidden;
+}
+
+/* Stars */
+.stars {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    background-image:
+      radial-gradient(2px 2px at 20% 30%, #fff 50%, transparent 100%),
+      radial-gradient(2px 2px at 70% 20%, #e9b8c8 50%, transparent 100%),
+      radial-gradient(1px 1px at 40% 80%, #fff 50%, transparent 100%),
+      radial-gradient(2px 2px at 85% 65%, #d6a0ad 50%, transparent 100%);
+    background-size: 180px 180px;
+    opacity: .5;
+    animation: sparkle 5s infinite alternate;
+}
+
+@keyframes sparkle {
+    from { opacity: .25; }
+    to { opacity: .8; }
+}
+
+/* Main container */
+.container {
+    position: relative;
+    max-width: 720px;
+    width: 92%;
+    margin: 45px auto;
+    padding: 45px 25px;
+    text-align: center;
+    border: 1px solid rgba(219,169,153,.4);
+    border-radius: 25px;
+    background: rgba(32, 12, 25, .78);
+    box-shadow: 0 0 45px rgba(184, 86, 119, .18);
+    animation: entrance 2s ease;
+}
+
+@keyframes entrance {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.eyebrow {
+    color: #d7a77f;
+    letter-spacing: 5px;
+    font-size: 11px;
+    text-transform: uppercase;
+}
+
+h1 {
+    font-family: 'Great Vibes', cursive;
+    color: #e8b5c4;
+    font-size: clamp(48px, 11vw, 75px);
+    font-weight: 400;
+    margin: 25px 0 5px;
+    text-shadow: 0 0 25px rgba(232,181,196,.35);
+}
+
+.subtitle {
+    color: #d7a77f;
+    font-size: 16px;
+    font-style: italic;
+    letter-spacing: 2px;
+}
+
+.ornament {
+    margin: 25px 0;
+    color: #c99477;
+    letter-spacing: 12px;
+}
+
+.intro {
+    font-size: 20px;
+    font-style: italic;
+    color: #e6c8cb;
+    margin-bottom: 25px;
+}
+
+.poem {
+    font-size: 20px;
+    line-height: 1.8;
+    font-style: italic;
+    color: #f2dfe0;
+}
+
+.stanza {
+    margin: 30px 0;
+    animation: glow 4s infinite alternate;
+}
+
+@keyframes glow {
+    from { text-shadow: 0 0 2px transparent; }
+    to { text-shadow: 0 0 12px rgba(235,171,190,.22); }
+}
+
+.heart {
+    color: #d58b9f;
+    font-size: 23px;
+    margin: 20px;
+    animation: heartbeat 2s infinite;
+}
+
+@keyframes heartbeat {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+}
+
+.closing {
+    font-size: 25px;
+    color: #e5b7a0;
+    font-style: italic;
+    margin-top: 40px;
+    line-height: 1.5;
+}
+
+.signature {
+    font-family: 'Great Vibes', cursive;
+    font-size: 35px;
+    color: #e8b5c4;
+    margin-top: 25px;
+}
+
+button {
+    background: linear-gradient(135deg, #b87884, #d8a37d);
+    border: none;
+    color: #210d18;
+    padding: 14px 28px;
+    border-radius: 30px;
+    font-family: Georgia, serif;
+    font-size: 14px;
+    cursor: pointer;
+    margin-top: 30px;
+    box-shadow: 0 0 20px rgba(216,163,125,.2);
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+.message {
+    display: none;
+    margin-top: 25px;
+    color: #edc7d0;
+    font-size: 20px;
+    font-style: italic;
+    line-height: 1.7;
+    animation: entrance 1.5s ease;
+}
+
+footer {
+    margin-top: 35px;
+    font-size: 11px;
+    color: #bb8d91;
+    letter-spacing: 3px;
+}
+
+/* Floating petals */
+.petal {
+    position: fixed;
+    top: -30px;
+    color: #e8a8ba;
+    opacity: .55;
+    pointer-events: none;
+    animation: fall linear infinite;
+    z-index: 2;
+}
+
+@keyframes fall {
+    to {
+        transform: translateY(110vh) rotate(360deg);
+    }
+}
+
+@media(max-width: 480px) {
+    .container {
+        padding: 35px 17px;
+        margin: 25px auto;
+    }
+
+    .poem {
+        font-size: 18px;
+    }
+
+    .closing {
+        font-size: 22px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="stars"></div>
+
+<div class="container">
+
+    <div class="eyebrow">A little universe of admiration</div>
+
+    <h1>Nonny, My Elysium</h1>
+
+    <div class="subtitle">
+        A Goddess in My Quiet Universe
+    </div>
+
+    <div class="ornament">✧ ♡ ✧</div>
+
+    <div class="intro">
+        Some beauty is seen.
+        Some beauty is felt.
+        And some simply stays...
+    </div>
+
+    <div class="heart">♥</div>
+
+    <div class="poem">
+
+        <div class="stanza">
+            Nonny walks in quiet light<br>
+            A soft eclipse along the street<br>
+            The kind that turns a passer's eyes<br>
+            As though dawn brushed past their feet.
+        </div>
+
+        <div class="ornament">✧</div>
+
+        <div class="stanza">
+            Her grace is a whispered rumour<br>
+            A bloom unfolding out of time<br>
+            I watch pretending not to watch<br>
+            Holding wonder like a rhyme
+        </div>
+
+        <div class="ornament">✧</div>
+
+        <div class="stanza">
+            If day must pass before we speak<br>
+            Let this feeling simply stay<br>
+            A seed tucked within my chest<br>
+            Gathering courage day by day
+        </div>
+
+    </div>
+
+    <div class="heart">♡</div>
+
+    <div class="closing">
+        Some feelings are too beautiful to rush.
+    </div>
+
+    <button onclick="revealMessage()">
+        A little secret for you ♡
+    </button>
+
+    <div class="message" id="secret">
+        If beauty had a language,<br>
+        perhaps it would sound like your name.<br><br>
+        You are not a destination I wish to rush towards,<br>
+        but a beautiful thought I don't mind carrying. ♡
+    </div>
+
+    <div class="signature">
+        With admiration, Seth.
+    </div>
+
+    <footer>
+        WRITTEN UNDER THE SAME SKY ✧
+    </footer>
+
+</div>
+
+<script>
+function revealMessage() {
+    const message = document.getElementById("secret");
+
+    if (message.style.display === "block") {
+        message.style.display = "none";
+    } else {
+        message.style.display = "block";
+    }
+}
+
+// Floating romantic petals
+const symbols = ["♡", "✧", "♥", "❀"];
+
+function createPetal() {
+    const petal = document.createElement("div");
+    petal.className = "petal";
+    petal.innerHTML =
+        symbols[Math.floor(Math.random() * symbols.length)];
+
+    petal.style.left = Math.random() * 100 + "vw";
+    petal.style.fontSize = (12 + Math.random() * 15) + "px";
+    petal.style.animationDuration = (7 + Math.random() * 8) + "s";
+
+    document.body.appendChild(petal);
+
+    setTimeout(() => {
+        petal.remove();
+    }, 16000);
+}
+
+setInterval(createPetal, 700);
+</script>
+
+</body>
+</html>
